@@ -1,10 +1,7 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: 
-html_document:
-keep_md: true
 author: "Giulio Giovannetti"
-date: "2024-04-23"
+date: "April 25, 2023"
 ---
 
 
@@ -72,7 +69,7 @@ head(total_steps_per_day)
 ```
 
 Finally we can plot the hisotgram of the steps per day.
-```{r}
+```{r histogram}
 ggplot(total_steps_per_day, aes(daily_steps)) + geom_histogram(binwidth = 2000) +
   xlab("Total number of steps per day") + 
   ylab("Frequency (%)")
@@ -113,7 +110,7 @@ head(average_steps_per_interval)
 ```
 
 Finally we can plot the time series of the steps per daily intervals.
-```{r}
+```{r timeseries}
 ggplot(data=average_steps_per_interval, aes(x=interval, y=steps)) +
     geom_line() +
     xlab("5-minute intervals") +
@@ -166,7 +163,7 @@ new_activity <- activity %>%
 ### Make a histogram anc calculate the mean and the median of the new dataset
 
 x
-```{r}
+```{r histogram_missings_filled}
 new_total_steps_per_day <- new_activity %>% 
   group_by(date) %>% 
   summarise(daily_steps = sum(steps))
@@ -209,7 +206,7 @@ day_of_week <- new_activity %>%
 ### Time series plot of the of steps taken across all weekday days or weekend days
 
 Finally we can plot the two required time series of average steps taken, during the weekend or during the weekday.
-```{r}
+```{r timeseries_weekend}
 ggplot(day_of_week, aes(interval, steps)) + 
   geom_line() + 
   facet_wrap(~weekday_or_weekend, nrow = 2) +
