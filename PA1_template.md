@@ -17,7 +17,7 @@ This is the code needed to
 Let start by configuring the code chunks.
 
 ```r
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.width = 10, fig.height = 5, fig.keep = 'all' ,fig.path = 'figure/ ', dev = 'png')
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.width = 10, fig.height = 5, fig.keep = 'all' ,fig.path = 'figure/', dev = 'png')
 ```
    
 The data shall be first unzipped and later loaded by means of the `read.csv` function.
@@ -188,7 +188,7 @@ ggplot(data=average_steps_per_interval, aes(x=interval, y=steps)) +
     ylab("Average number of steps")
 ```
 
-![plot of chunk timeseries](figure/ timeseries-1.png)
+![plot of chunk timeseries](figure/timeseries-1.png)
 
 ### Find the interval when the most steps are taken
 
@@ -262,7 +262,7 @@ ggplot(new_total_steps_per_day, aes(daily_steps)) +
   ylab("Frequency (%)")
 ```
 
-![plot of chunk histogram_missings_filled](figure/ histogram_missings_filled-1.png)
+![plot of chunk histogram_missings_filled](figure/histogram_missings_filled-1.png)
 
 
 ```r
@@ -323,4 +323,4 @@ ggplot(day_of_week, aes(interval, steps)) +
   ylab("Average number of steps")
 ```
 
-![plot of chunk timeseries_weekend](figure/ timeseries_weekend-1.png)
+![plot of chunk timeseries_weekend](figure/timeseries_weekend-1.png)

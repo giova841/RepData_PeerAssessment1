@@ -16,7 +16,7 @@ This is the code needed to
 
 Let start by configuring the code chunks.
 ```{r}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.width = 10, fig.height = 5, fig.keep = 'all' ,fig.path = 'figure/ ', dev = 'png')
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.width = 10, fig.height = 5, fig.keep = 'all' ,fig.path = 'figure/', dev = 'png')
 ```
    
 The data shall be first unzipped and later loaded by means of the `read.csv` function.
