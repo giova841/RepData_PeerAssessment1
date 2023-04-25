@@ -159,7 +159,7 @@ table, .body h2 { border-bottom: 1px solid #666; }
 </ol>
 <h3 id="load-the-data">Load the data</h3>
 <p>Let start by configuring the code chunks.</p>
-<pre><code class="language-r">knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.width = 10, fig.height = 5, fig.keep = 'all' ,fig.path = 'figures/ ', dev = 'png')
+<pre><code class="language-r">knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.width = 10, fig.height = 5, fig.keep = 'all' ,fig.path = 'figure/ ', dev = 'png')
 </code></pre>
 <p>The data shall be first unzipped and later loaded by means of the <code>read.csv</code> function.</p>
 <pre><code class="language-r">unzip(&quot;activity.zip&quot;)
@@ -227,7 +227,7 @@ library(lubridate)
   xlab(&quot;Total number of steps per day&quot;) + 
   ylab(&quot;Frequency (%)&quot;)
 </code></pre>
-<p>![plot of chunk histogram](figures/ histogram-1.png)</p>
+<p>![plot of chunk histogram](figure/ histogram-1.png)</p>
 <h3 id="calculate-the-mean-and-median-of-the-steps-per-day">Calculate the mean and median of the steps per day</h3>
 <p>The mean number of steps taker per day is:</p>
 <pre><code class="language-r">mean_raw&lt;-mean(total_steps_per_day$daily_steps, na.rm=TRUE)
@@ -275,7 +275,7 @@ median_raw
     xlab(&quot;5-minute intervals&quot;) +
     ylab(&quot;Average number of steps&quot;)
 </code></pre>
-<p>![plot of chunk timeseries](figures/ timeseries-1.png)</p>
+<p>![plot of chunk timeseries](figure/ timeseries-1.png)</p>
 <h3 id="find-the-interval-when-the-most-steps-are-taken">Find the interval when the most steps are taken</h3>
 <p>The interval when, on average, the steps takes are max is:</p>
 <pre><code class="language-r">average_steps&lt;-as.numeric(unlist(average_steps_per_interval[,2]))
@@ -330,7 +330,7 @@ ggplot(new_total_steps_per_day, aes(daily_steps)) +
   xlab(&quot;Total number of steps per day&quot;) + 
   ylab(&quot;Frequency (%)&quot;)
 </code></pre>
-<p>![plot of chunk histogram_missings_filled](figures/ histogram_missings_filled-1.png)</p>
+<p>![plot of chunk histogram_missings_filled](figure/ histogram_missings_filled-1.png)</p>
 <pre><code class="language-r">new_mean_raw = mean(new_total_steps_per_day$daily_steps)
 new_mean_raw
 </code></pre>
@@ -373,7 +373,7 @@ new_median_raw
   xlab(&quot;5-Minute intervals&quot;) + 
   ylab(&quot;Average number of steps&quot;)
 </code></pre>
-<p>![plot of chunk timeseries_weekend](figures/ timeseries_weekend-1.png)</p>
+<p>![plot of chunk timeseries_weekend](figure/ timeseries_weekend-1.png)</p>
 </div>
 <div class="include-after">
 </div>
