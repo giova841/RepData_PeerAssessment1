@@ -119,7 +119,7 @@ ggplot(total_steps_per_day, aes(daily_steps)) + geom_histogram(binwidth = 2000) 
   ylab("Frequency (%)")
 ```
 
-![plot of chunk histogram](figure/ histogram-1.png)
+![plot of chunk histogram](figure/histogram-1.png)
 
 ### Calculate the mean and median of the steps per day
 
